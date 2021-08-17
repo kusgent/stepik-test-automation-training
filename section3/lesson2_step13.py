@@ -3,6 +3,7 @@
 from selenium import webdriver
 import unittest
 
+
 class TestReg(unittest.TestCase):
     def test_reg1(self):
         browser = webdriver.Chrome()
@@ -32,6 +33,7 @@ class TestReg(unittest.TestCase):
         welcome_text = browser.find_element_by_tag_name("h1").text
 
         self.assertEqual(welcome_text, "Congratulations! You have successfully registered!", "The expected welcome text was not found!")
+
 
 if __name__ == "__main__":
     unittest.main()
